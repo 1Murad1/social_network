@@ -1,4 +1,11 @@
-import {follow, unfollow, setUsers} from "../reducers/usersReducer";
+import {
+    follow,
+    unfollow,
+    setUsers,
+    setCurrentPage,
+    setTotalUsersCount,
+    toggleIsFetching
+} from "../reducers/usersReducer";
 
 export const followActionCreator = (userId) => {
     return {
@@ -18,5 +25,26 @@ export const setUsersActionCreator = (users) => {
     return {
         type: setUsers,
         users: users
+    }
+}
+
+export const setCurrentPageActionCreator = (currentPage) => {
+    return {
+        type: setCurrentPage,
+        currentPage: currentPage
+    }
+}
+
+export const  setTotalUsersCountActionCreator = (totalCount) => {
+    return {
+        type:  setTotalUsersCount,
+        totalCount:  totalCount
+    }
+}
+
+export const  toggleIsFetchingActionCreator = (isFetching) => {
+    return {
+        type:  toggleIsFetching,
+        isFetching:  isFetching
     }
 }

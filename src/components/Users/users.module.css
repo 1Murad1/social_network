@@ -41,3 +41,11 @@
 .right_block .top_block p {
     margin: 0;
 }
+
+.selectedPage {
+    color: gold;
+}
+
+.hov:hover {
+    cursor: pointer;
+}
